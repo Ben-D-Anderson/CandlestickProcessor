@@ -8,6 +8,7 @@ import java.util.Optional;
 import java.util.Random;
 
 public class RandomChoice implements Algorithm {
+
     @Override
     public int getMinimumWindowSize() {
         return 1;

@@ -26,7 +26,8 @@ public class ClosedAtHigh implements Algorithm {
             debug("predict#WARNING: last candlestick empty for session window at index " + (sessionWindow.size() - 1));
             return Optional.empty();
         }
-        return lastCandlestick.get().close() == lastCandlestick.get().high() ? Optional.of(Direction.UP) : Optional.empty();
+        boolean closedHigh = lastCandlestick.get().close() == lastCandlestick.get().high();
+        return closedHigh ? Optional.of(Direction.UP) : Optional.empty();
     }
 
 }

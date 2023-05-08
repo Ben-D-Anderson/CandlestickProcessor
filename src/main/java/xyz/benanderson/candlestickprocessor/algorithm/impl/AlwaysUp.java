@@ -7,6 +7,7 @@ import xyz.benanderson.candlestickprocessor.data.Direction;
 import java.util.Optional;
 
 public class AlwaysUp implements Algorithm {
+
     @Override
     public int getMinimumWindowSize() {
         return 1;
